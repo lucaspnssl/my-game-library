@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.section `
     background: transparent;
     border-bottom: 1px solid #bfbfbf;
     width: 80%;

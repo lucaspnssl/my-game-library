@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { FiLogIn, FiMail, FiLock } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import Button from '../../components/Button';
 import Input from '../../components/Input';
@@ -8,16 +8,22 @@ import Logo from '../../components/Logo';
 
 import { Container, Content, Background, LoginContent } from './styles';
 
-const Dashboard: React.FC = () => {
+const SignIn: React.FC = () => {
+    const history = useHistory();
+
+    const handleClickLogInButton = useCallback(() => {
+        history.push('/dashboard');
+    }, [history])
+
     return (
         <Container>
             <Content>
-                <Logo />
                 <LoginContent>
+                    <Logo />
                     <Input name="email" placeholder="Your E-mail" icon={FiMail} />
                     <Input name="password" placeholder="Your Password" type="password" icon={FiLock} />
 
-                    <Button>
+                    <Button onClick={handleClickLogInButton}>
                         Log In
                     </Button>
 
@@ -32,4 +38,4 @@ const Dashboard: React.FC = () => {
     )
 }
 
-export default Dashboard;
+export default SignIn;

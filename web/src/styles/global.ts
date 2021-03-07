@@ -9,7 +9,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,15,125,1) 150%);
+    background: #7F0000;
     color: #FFF;
     -webkit-font-smoothing: antialiased;
   }

@@ -7,7 +7,6 @@ export const Container = styled.div`
   height: 100vh;
   display: flex;
   align-items: stretch;
-  background: #7F0000;
 `;
 
 export const Content = styled.div`
@@ -47,18 +46,19 @@ export const LoginContent = styled.div`
     justify-content: center;
     align-items: center;
     animation: ${appearFromLeft} 1s;
+    
     > button {
         margin-top: 40px;
         width: 80%;
     }
 
     > div {
+        margin-bottom: 55px;
+    }
+
+    > section  {
         margin-bottom: 30px;       
         height: 40px;
-
-        &:first-child {
-            margin-top: 55px;
-        }
     }
 
     > a {
