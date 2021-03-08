@@ -5,6 +5,7 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.div`
+    position: absolute;
     background: #1a1a1a;
     width: 100%;
     height: 90px;
@@ -55,5 +56,38 @@ export const Action = styled.section`
     &:hover {
         opacity: 0.6;
         box-shadow: 0 0 8px 1px #808080;
+    }
+`;
+
+export const Profile = styled.div`
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 80px;
+`;
+
+export const ProfileInfos = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid #ffffff;
+        margin-right: 20px;
+    }
+
+    p {
+        font-size: 18px;
+        color: #b3b3b3;
     }
 `;
