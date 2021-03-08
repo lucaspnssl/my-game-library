@@ -2,14 +2,16 @@ import React from 'react';
 
 import { Container, Title } from './styles';
 
-interface LogoProps {
+type LogoProps = React.HTMLAttributes<HTMLDivElement> & {
     touchable?: boolean;
     text?: 'MY GAME LIBRARY' | 'MGL';
 }
 
-const Logo: React.FC<LogoProps> = ({ touchable = false, text = 'MY GAME LIBRARY' }) => (
-    <Container touchable={touchable}>
+
+const Logo: React.FC<LogoProps> = ({ touchable = false, text = 'MY GAME LIBRARY', children, ...rest }) => (
+    <Container touchable={touchable} {...rest}>
         <Title>{text}</Title>
+        {children}
     </Container>
 )
 

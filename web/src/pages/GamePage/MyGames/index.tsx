@@ -6,39 +6,26 @@ import { Container, GameList, GameCard, Content } from './styles';
 interface Games {
     id: string
     name: string;
-    cover?: string;
-    cover_url?: string;
+    cover: {
+        url: string;
+    };
 }
 
-interface CoversResponse {
-    id: string;
-    url: string;
-}
-
-const Dashboard: React.FC = () => {
-    const [filteredGames, setGamesFilteredGames] = useState<Games[]>([]);
+const MyGames: React.FC = () => {
+    const [games, setGames] = useState<Games[]>([]);
 
     useEffect(() => {
-        fechData<Games[]>('https://api.igdb.com/v4/games', "fields id, name, cover; where name ~ *\"Dark Souls\"*; limit 10;")
+        fechData<Games[]>('https://api.igdb.com/v4/games', "fields id, name, cover.url; where name ~ *\"Dark Souls\"*; limit 10;")
             .then(response => {
-                const games = response;
-                const coversIds = games
-                    .filter(game => game.cover)
-                    .map(game => game.cover);
-
-                fechData<CoversResponse[]>('https://api.igdb.com/v4/covers', `fields id, url; where id = (${coversIds.join()});`)
-                    .then(coverResponse => {
-                        coverResponse.forEach(cover => {
-                            const gamesWithCover = games.filter(game => game.cover === cover.id);
-                            gamesWithCover.forEach(game => {
-                                games[games.indexOf(game)] = {
-                                    ...game,
-                                    cover_url: cover.url
-                                }
-                            })
-                        })
-                        setGamesFilteredGames(games);
-                    });
+                const games = response.map(game => {
+                    return {
+                        ...game,
+                        cover: {
+                            url: game.cover?.url?.replace('t_thumb', 't_1080p')
+                        }
+                    }
+                })
+                setGames(games);
             });
     }, []);
 
@@ -46,9 +33,9 @@ const Dashboard: React.FC = () => {
         <Container>
             <Content>
                 <GameList>
-                    {filteredGames.map(game => (
+                    {games.map(game => (
                         <GameCard key={game.id}>
-                            <img src={game.cover_url ?? `https://dummyimage.com/600x400/404040/ffffff&text=${game.name}`} alt={game.name} />
+                            <img src={game.cover?.url ?? `https://dummyimage.com/600x400/404040/ffffff&text=${game.name}`} alt={game.name} />
                             <p>{game.name}</p>
                         </GameCard>
                     ))}
@@ -58,4 +45,4 @@ const Dashboard: React.FC = () => {
     );
 }
 
-export default Dashboard;
+export default MyGames;
