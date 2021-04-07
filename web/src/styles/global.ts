@@ -8,6 +8,15 @@ export default createGlobalStyle`
     outline: 0;
   }
 
+  html {
+        @media (max-width: 1080px) {
+            font-size: 93.75%;
+        }
+        @media (max-width: 720px) {
+            font-size: 87.5%;
+        }        
+    }
+
   body {
     background-color: #000000;
     background-image: linear-gradient(315deg, #000000 0%, #b82e1f 74%);

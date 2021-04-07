@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 import { FiClock, FiPower } from 'react-icons/fi';
 import { useHistory } from 'react-router-dom';
 import Logo from '../Logo';
+import SearchBar from '../SearchBar';
 import { Action, Actions, Container, Header, HeaderLogo, Profile, ProfileInfos } from './styles';
 
 const Layout: React.FC = ({ children, ...rest }) => {
@@ -21,6 +22,7 @@ const Layout: React.FC = ({ children, ...rest }) => {
                 <HeaderLogo>
                     <Logo touchable onClick={handleClickLogo} />
                 </HeaderLogo>
+                <SearchBar />
                 <Profile>
                     <ProfileInfos>
                         <img src="https://dummyimage.com/400x400/404040/ffffff&text=Your+Name" alt="Name" />

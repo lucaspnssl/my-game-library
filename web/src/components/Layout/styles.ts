@@ -60,7 +60,6 @@ export const Action = styled.section`
 `;
 
 export const Profile = styled.div`
-    flex: 1;
     display: flex;
     justify-content: flex-end;
     margin-right: 80px;

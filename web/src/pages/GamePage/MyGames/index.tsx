@@ -1,15 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { fechData } from '../../../utils/fetchData';
+import { Games } from '../../../utils/games';
 
 import { Container, GameList, GameCard, Content } from './styles';
-
-interface Games {
-    id: string
-    name: string;
-    cover: {
-        url: string;
-    };
-}
 
 const MyGames: React.FC = () => {
     const [games, setGames] = useState<Games[]>([]);

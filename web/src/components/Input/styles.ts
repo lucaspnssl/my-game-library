@@ -7,7 +7,7 @@ export const Container = styled.section `
     display: flex;
     align-items: center;
 
-    & + div {
+    & + & {
         margin-top: 8px;
     }
 
