@@ -30,33 +30,33 @@ const appearFromRight = keyframes`
 `;
 
 export const Introduction = styled.div`
-    margin-left: 200px;
-    width: 400px;
+    margin-left: 12.5rem;
+    width: 25rem;
 
     animation: ${appearFromLeft} 1s;
 
     p {
-        margin-top: 12px;
-        font-size: 20px;
+        margin-top: 0.75rem;
+        font-size: 1.25rem;
         font-family: "Roboto Slab", serif;
         font-weight: 500;
-        line-height: 26px;
+        line-height: 1.625rem;
         color: #1a1a1a;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 `;
 
 export const IntroTitle = styled.h1`
-    font-size: 62px;
+    font-size: 3.875rem;
     font-weight: bold;
     text-transform: uppercase;
     font-family: "Bebas Neue", "Roboto Slab", serif;
     letter-spacing: 4px;
-    line-height: 52px;
+    line-height: 3.25rem;
 `;
 
 export const Actions = styled.div`
-    margin-right: 280px;
+    margin-right: 17.5rem;
 
     display: flex;
     justify-content: center;
@@ -65,7 +65,7 @@ export const Actions = styled.div`
 
 export const Action = styled.div`
     &:first-child {
-        margin-right: 120px;
+        margin-right: 7.5rem;
     }
 
     cursor: pointer;
@@ -75,8 +75,8 @@ export const Action = styled.div`
     font-family: "Bebas Neue", "Roboto Slab", serif;
     letter-spacing: 2px;
 
-    width: 140px;
-    height: 140px;
+    width: 8.75rem;
+    height: 8.75rem;
 
     background: #1a1a1a;
     border: 1px solid #000000;
@@ -86,7 +86,7 @@ export const Action = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 22px 8px;
+    padding: 1.375rem 0.5rem;
     align-items: center;
 
     strong {
@@ -95,8 +95,8 @@ export const Action = styled.div`
     }
 
     svg {
-        width: 40px;
-        height: 40px;
+        width: 2.5rem;
+        height: 2.5rem;
     }
 
     transition: opacity 0.2s;

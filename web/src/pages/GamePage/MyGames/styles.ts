@@ -5,7 +5,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-    margin: 80px 260px 0 260px;
+    margin: 5rem 16.25rem 0 260px;
     display: flex;
     justify-content: center;
 `;
@@ -17,25 +17,25 @@ export const GameList = styled.div`
 `;
 
 export const GameCard = styled.div`
-    width: 220px;
-    height: 250px;
+    width: 13.75rem;
+    height: 15.625rem;
     border: 1px solid #ffffff;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 10px;
+    padding: 1.25rem 0.625rem;
     text-align: center;
     flex-shrink: 0;
-    margin-right: 26px;
-    margin-bottom: 21px;
+    margin-right: 1.625rem;
+    margin-bottom: 1.32rem;
 
     img {
-        width: 100px;
-        height: 100px;
-        border-radius: 10px;
+        width: 6.25rem;
+        height: 6.25rem;
+        border-radius: 0.625rem;
     }
 `;

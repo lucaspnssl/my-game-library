@@ -8,18 +8,18 @@ export const Header = styled.div`
     position: absolute;
     background: #1a1a1a;
     width: 100%;
-    height: 90px;
+    height: 5.625rem;
 
     display: flex;
     justify-content: space-between;
-    padding: 10px 45px;
+    padding: 0.625rem 2.8125rem;
     align-items: center;
 `;
 
 export const HeaderLogo = styled.div`
     display: flex;
     justify-content: center;
-    height: 70px;
+    height: 4.375rem;
 `;
 
 export const Actions = styled.div`
@@ -37,20 +37,20 @@ export const Action = styled.section`
     border: 1px solid #660000;
     border-radius: 8px;
 
-    width: 45px;
-    height: 45px;
+    width: 2.8rem;
+    height: 2.8rem;
     cursor: pointer;
 
     svg {
-        width: 20px;
-        height: 20px;
+        width: 1.25rem;
+        height: 1.25rem;
     }
 
     transition: opacity 0.2s;
     transition: box-shadow 0.2s;
 
     &:first-child {
-        margin-right: 45px;
+        margin-right: 2.8rem;
     }
 
     &:hover {
@@ -62,7 +62,7 @@ export const Action = styled.section`
 export const Profile = styled.div`
     display: flex;
     justify-content: flex-end;
-    margin-right: 80px;
+    margin-right: 5rem;
 `;
 
 export const ProfileInfos = styled.div`
@@ -78,15 +78,15 @@ export const ProfileInfos = styled.div`
     }
 
     img {
-        width: 60px;
-        height: 60px;
+        width: 3.75rem;
+        height: 3.75rem;
         border-radius: 50%;
         border: 2px solid #ffffff;
-        margin-right: 20px;
+        margin-right: 1.25rem;
     }
 
     p {
-        font-size: 18px;
+        font-size: 1.125rem;
         color: #b3b3b3;
     }
 `;

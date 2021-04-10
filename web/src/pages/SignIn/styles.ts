@@ -14,9 +14,9 @@ export const Content = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 550px;
-    min-width: 550px;
-    padding: 80px;
+    width: 35rem;
+    min-width: 35rem;
+    padding: 5rem;
 
     box-shadow: inset -2px 0 7px #000000;
 `;
@@ -48,23 +48,23 @@ export const LoginContent = styled.div`
     animation: ${appearFromLeft} 1s;
     
     > button {
-        margin-top: 40px;
+        margin-top: 2.5rem;
         width: 80%;
     }
 
     > div {
-        margin-bottom: 55px;
+        margin-bottom: 3.5rem;
     }
 
     > section  {
-        margin-bottom: 30px;       
-        height: 40px;
+        margin-bottom: 1.875rem;       
+        height: 2.5rem;
     }
 
     > a {
         color: #d9d9d9;
         display: block;
-        margin-top: 32px;
+        margin-top: 2rem;
         text-decoration: none;
         transition: color 0.2s;
 
@@ -72,7 +72,7 @@ export const LoginContent = styled.div`
         align-items: center;
 
         svg {
-            margin-right: 16px;
+            margin-right: 1rem;
         }
 
         &:hover {

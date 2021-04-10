@@ -3,16 +3,16 @@ import styled from 'styled-components';
 
 export const Container = styled.button`
   background: #1a1a1a;
-  height: 56px;
+  height: 3.5rem;
   border-radius: 55px;
   border: 0;
-  padding: 0 16px;
+  padding: 0 1rem;
   color: #d9d9d9;
   width: 100%;
   font-weight: 500;
-  margin-top: 16px;
+  margin-top: 1rem;
   transition: background-color 0.2s;
-  font-size: 18px;
+  font-size: 1.125rem;
 
   &:hover {
     background: ${shade(0.2, '#1a1a1a')};

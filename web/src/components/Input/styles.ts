@@ -17,11 +17,10 @@ export const Container = styled.section `
         flex: 1;
         border: 0;
         height: 90%;
-        font-size: 16px;
+        font-size: 1rem;
 
         &::placeholder {
             color: #d9d9d9;
-            font-style: italic;
             opacity: 0.6;
         }
     }
